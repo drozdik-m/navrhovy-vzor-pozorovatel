@@ -4,12 +4,12 @@ using System.Text;
 
 namespace Pozorovatel
 {
-    class SimpleEvent
+    public class SimpleEvent
     {
         private List<VoidFunction> observerFunctions = new List<VoidFunction>();
 
         /// <summary>
-        /// Metoda, která přidá nového pozorovatele (resp. jeho funkci)
+        /// Metoda, která přidá nového pozorovatele (resp. jeho funkci na pozdější zavolání)
         /// </summary>
         /// <param name="newObserverFunction"></param>
         public void Add(VoidFunction newObserverFunction)
@@ -27,5 +27,5 @@ namespace Pozorovatel
         }
     }
 
-    delegate void VoidFunction();
+    public delegate void VoidFunction();
 }
